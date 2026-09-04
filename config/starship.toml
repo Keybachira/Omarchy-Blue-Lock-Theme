@@ -1,0 +1,42 @@
+format = """
+[◉ ](bold #197DFF)$username
+[⚽ ](bold #65D9FF)$hostname
+[📁 ](bold #F4F8FF)$directory
+[🌿 ](bold #65D9FF)$git_branch$git_status
+[⚡ ](bold #9AB5D6)$cmd_duration
+$character"""
+
+add_newline = false
+
+[username]
+show_always = true
+format = "[$user]($style)"
+style = "bold #F4F8FF"
+
+[hostname]
+ssh_only = false
+format = "[$hostname]($style)"
+style = "bold #65D9FF"
+
+[directory]
+format = "[$path]($style)"
+style = "bold #F4F8FF"
+truncation_length = 3
+truncate_to_repo = false
+
+[git_branch]
+format = "[$branch]($style) "
+style = "bold #65D9FF"
+
+[git_status]
+format = "[$all_status$ahead_behind]($style)"
+style = "bold #B7ECFF"
+
+[cmd_duration]
+min_time = 0
+format = "[$duration]($style)"
+style = "bold #9AB5D6"
+
+[character]
+success_symbol = "[✔](bold #35D07F)"
+error_symbol = "[✖](bold #FF4D4D)"

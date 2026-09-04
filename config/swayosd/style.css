@@ -1,0 +1,29 @@
+window {
+  background-color: rgba(5, 11, 24, 0.74);
+  border: 1px solid rgba(25, 125, 255, 0.36);
+  border-radius: 18px;
+  box-shadow: 0 0 28px rgba(25, 125, 255, 0.16);
+  color: #F4F8FF;
+  font-family: "Space Grotesk", "JetBrains Mono Nerd Font", sans-serif;
+}
+
+progressbar,
+progress {
+  background-color: rgba(25, 125, 255, 0.18);
+  border-radius: 999px;
+}
+
+progressbar trough {
+  background-color: rgba(11, 22, 48, 0.92);
+  border-radius: 999px;
+}
+
+progressbar progress {
+  background: linear-gradient(90deg, rgba(25, 125, 255, 0.98), rgba(101, 217, 255, 0.92));
+}
+
+label {
+  color: #F4F8FF;
+  font-weight: 700;
+  letter-spacing: 2px;
+}

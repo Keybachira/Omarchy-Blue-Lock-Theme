@@ -1,0 +1,98 @@
+configuration {
+  modi: "drun,run,window";
+  show-icons: true;
+  drun-display-format: "{name}";
+}
+
+* {
+  bg0: rgba(5, 11, 24, 0.78);
+  bg1: rgba(11, 22, 48, 0.92);
+  bg2: rgba(25, 125, 255, 0.18);
+  bg3: rgba(25, 125, 255, 0.34);
+  fg0: #F4F8FF;
+  fg1: #9AB5D6;
+  accent: #197DFF;
+  accent2: #65D9FF;
+  urgent: #FF4D4D;
+  font: "Space Grotesk 12";
+}
+
+window {
+  location: center;
+  anchor: center;
+  width: 38%;
+  transparency: "real";
+  background-color: @bg0;
+  border: 2px;
+  border-color: @accent;
+  border-radius: 24px;
+  padding: 18px;
+}
+
+mainbox {
+  spacing: 14px;
+  children: [ "inputbar", "listview" ];
+}
+
+inputbar {
+  background-color: @bg1;
+  border: 1px solid @bg3;
+  border-radius: 18px;
+  padding: 14px 16px;
+  spacing: 12px;
+}
+
+prompt {
+  text-color: @accent2;
+  font: "Space Grotesk Bold 12";
+}
+
+entry {
+  text-color: @fg0;
+  placeholder-color: @fg1;
+  background-color: transparent;
+  cursor-color: @accent2;
+}
+
+listview {
+  background-color: transparent;
+  spacing: 8px;
+  scrollbar: false;
+}
+
+element {
+  background-color: @bg1;
+  border: 1px solid transparent;
+  border-radius: 16px;
+  padding: 12px 14px;
+  spacing: 12px;
+}
+
+element normal {
+  background-color: @bg1;
+}
+
+element selected {
+  background-color: @bg2;
+  border: 1px solid @accent;
+  text-color: @fg0;
+}
+
+element urgent {
+  background-color: alpha(@urgent, 0.14);
+  border: 1px solid @urgent;
+}
+
+element-icon {
+  size: 24px;
+}
+
+element-text {
+  text-color: @fg0;
+}
+
+message {
+  background-color: @bg1;
+  border-radius: 16px;
+  padding: 12px;
+}

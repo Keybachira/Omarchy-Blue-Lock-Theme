@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2160" width="3840" height="2160">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#02040b"/>
+      <stop offset="0.48" stop-color="#050b18"/>
+      <stop offset="1" stop-color="#0b1630"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.82" cy="0.5" r="0.52">
+      <stop offset="0" stop-color="#197dff" stop-opacity="0.2"/>
+      <stop offset="0.45" stop-color="#65d9ff" stop-opacity="0.09"/>
+      <stop offset="1" stop-color="#050b18" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="3840" height="2160" fill="url(#bg)"/>
+  <rect width="3840" height="2160" fill="url(#glow)"/>
+
+  <g opacity="0.16">
+    <path d="M0 240 H3840 M0 480 H3840 M0 720 H3840 M0 960 H3840 M0 1200 H3840 M0 1440 H3840 M0 1680 H3840 M0 1920 H3840" stroke="#197DFF" stroke-width="2"/>
+    <path d="M280 0 V2160 M560 0 V2160 M840 0 V2160 M1120 0 V2160 M1400 0 V2160 M1680 0 V2160 M1960 0 V2160 M2240 0 V2160 M2520 0 V2160 M2800 0 V2160 M3080 0 V2160 M3360 0 V2160" stroke="#197DFF" stroke-width="1"/>
+  </g>
+
+  <g transform="translate(2350 300)">
+    <polygon points="220,0 420,120 420,360 220,480 20,360 20,120" fill="#197DFF" fill-opacity="0.05" stroke="#197DFF" stroke-opacity="0.35" stroke-width="3"/>
+    <circle cx="220" cy="240" r="128" fill="none" stroke="#65D9FF" stroke-opacity="0.35" stroke-width="3"/>
+    <circle cx="220" cy="240" r="170" fill="none" stroke="#197DFF" stroke-opacity="0.22" stroke-width="2"/>
+    <path d="M156 352 L176 260 C176 221, 200 190, 220 190 C240 190, 264 221, 264 260 L284 352" fill="none" stroke="#65D9FF" stroke-width="5" stroke-linecap="round"/>
+    <rect x="146" y="350" width="148" height="26" rx="13" fill="#197DFF" fill-opacity="0.18" stroke="#65D9FF" stroke-opacity="0.5" stroke-width="2"/>
+  </g>
+
+  <g transform="translate(210 210)">
+    <text x="0" y="82" fill="#F4F8FF" fill-opacity="0.92" font-family="Space Grotesk, sans-serif" font-size="64" letter-spacing="5">SESSION LOCKED</text>
+    <text x="0" y="140" fill="#9AB5D6" fill-opacity="0.82" font-family="Space Grotesk, sans-serif" font-size="28" letter-spacing="7">BLUE LOCK MONITORING INTERFACE</text>
+    <rect x="0" y="190" width="960" height="18" rx="9" fill="#197DFF" fill-opacity="0.26"/>
+    <rect x="0" y="240" width="780" height="14" rx="7" fill="#65D9FF" fill-opacity="0.22"/>
+    <rect x="0" y="284" width="540" height="14" rx="7" fill="#197DFF" fill-opacity="0.18"/>
+    <rect x="0" y="326" width="360" height="14" rx="7" fill="#65D9FF" fill-opacity="0.18"/>
+  </g>
+</svg>

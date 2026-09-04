@@ -1,0 +1,55 @@
+* {
+  font-family: "Space Grotesk", "JetBrains Mono Nerd Font", sans-serif;
+  color: #F4F8FF;
+}
+
+window {
+  background-color: rgba(5, 11, 24, 0.58);
+}
+
+button {
+  background-color: rgba(11, 22, 48, 0.82);
+  border: 1px solid rgba(25, 125, 255, 0.34);
+  border-radius: 20px;
+  margin: 16px;
+  padding: 18px;
+  box-shadow: 0 0 24px rgba(25, 125, 255, 0.14);
+  transition: all 150ms ease-in-out;
+}
+
+button:hover {
+  background-color: rgba(25, 125, 255, 0.2);
+  border-color: rgba(101, 217, 255, 0.78);
+  box-shadow: 0 0 28px rgba(25, 125, 255, 0.28);
+}
+
+button:focus {
+  outline: none;
+  border-color: rgba(101, 217, 255, 0.95);
+}
+
+button label {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+#lock {
+  color: #65d9ff;
+}
+
+#logout {
+  color: #f4f8ff;
+}
+
+#suspend {
+  color: #9ab5d6;
+}
+
+#reboot {
+  color: #b4e4ff;
+}
+
+#shutdown {
+  color: #ff7777;
+}

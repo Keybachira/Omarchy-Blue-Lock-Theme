@@ -1,0 +1,101 @@
+@define-color bl_bg rgba(5, 11, 24, 0.96);
+@define-color bl_surface rgba(11, 22, 48, 0.94);
+@define-color bl_surface_soft rgba(11, 22, 48, 0.82);
+@define-color bl_accent #197DFF;
+@define-color bl_accent_soft rgba(25, 125, 255, 0.24);
+@define-color bl_accent_soft2 rgba(101, 217, 255, 0.18);
+@define-color bl_text #F4F8FF;
+@define-color bl_text_soft #9AB5D6;
+@define-color bl_danger #FF4D4D;
+
+* {
+  color: @bl_text;
+}
+
+window,
+dialog,
+.background {
+  background-color: @bl_bg;
+  color: @bl_text;
+}
+
+headerbar,
+.titlebar {
+  background-color: @bl_surface;
+  color: @bl_text;
+  border-bottom: 1px solid @bl_accent_soft;
+  box-shadow: inset 0 -1px 0 alpha(@bl_accent, 0.4);
+}
+
+button,
+entry,
+combobox,
+spinbutton,
+scale trough,
+popover,
+menu,
+treeview,
+list,
+textview {
+  border-radius: 12px;
+}
+
+button {
+  background-image: none;
+  background-color: @bl_surface_soft;
+  border: 1px solid @bl_accent_soft;
+  box-shadow: none;
+}
+
+button:hover {
+  background-color: @bl_accent_soft2;
+  border-color: alpha(@bl_accent, 0.7);
+}
+
+button:active,
+button:checked {
+  background-color: alpha(@bl_accent, 0.2);
+  border-color: @bl_accent;
+}
+
+entry,
+spinbutton,
+combobox {
+  background-color: @bl_bg;
+  border: 1px solid @bl_accent_soft;
+  padding: 8px 10px;
+}
+
+entry:focus,
+spinbutton:focus,
+combobox:focus {
+  border-color: @bl_accent;
+  box-shadow: 0 0 0 1px @bl_accent;
+}
+
+selection {
+  background-color: alpha(@bl_accent, 0.3);
+  color: @bl_text;
+}
+
+scrollbar slider {
+  background-color: alpha(@bl_accent, 0.56);
+  border-radius: 999px;
+}
+
+tooltip {
+  background-color: rgba(5, 11, 24, 0.96);
+  color: @bl_text;
+  border: 1px solid alpha(@bl_accent, 0.5);
+}
+
+treeview row:selected,
+list row:selected {
+  background-color: alpha(@bl_accent, 0.22);
+}
+
+menu separator,
+popover separator {
+  background-color: alpha(@bl_accent, 0.22);
+}
+
