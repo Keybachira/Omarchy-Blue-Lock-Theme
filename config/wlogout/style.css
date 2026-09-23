@@ -1,55 +1,56 @@
 * {
   font-family: "Space Grotesk", "JetBrains Mono Nerd Font", sans-serif;
-  color: #F4F8FF;
+  color: #E6F0FF;
 }
 
 window {
-  background-color: rgba(5, 11, 24, 0.58);
+  background-color: rgba(1, 10, 30, 0.62);
 }
 
 button {
-  background-color: rgba(11, 22, 48, 0.82);
-  border: 1px solid rgba(25, 125, 255, 0.34);
+  background-color: rgba(10, 30, 61, 0.82);
+  border: 1px solid rgba(0, 102, 255, 0.34);
   border-radius: 20px;
   margin: 16px;
   padding: 18px;
-  box-shadow: 0 0 24px rgba(25, 125, 255, 0.14);
+  box-shadow: 0 0 24px rgba(0, 102, 255, 0.14), inset 0 1px 0 rgba(255,255,255,0.04);
   transition: all 150ms ease-in-out;
 }
 
 button:hover {
-  background-color: rgba(25, 125, 255, 0.2);
-  border-color: rgba(101, 217, 255, 0.78);
-  box-shadow: 0 0 28px rgba(25, 125, 255, 0.28);
+  background-color: rgba(0, 102, 255, 0.20);
+  border-color: rgba(0, 229, 255, 0.78);
+  box-shadow: 0 0 28px rgba(0, 102, 255, 0.28), 0 0 12px rgba(0,229,255,0.18);
 }
 
 button:focus {
   outline: none;
-  border-color: rgba(101, 217, 255, 0.95);
+  border-color: rgba(0, 229, 255, 0.95);
+  box-shadow: 0 0 30px rgba(0, 229, 255, 0.34);
 }
 
 button label {
-  font-size: 18px;
-  font-weight: 700;
-  letter-spacing: 3px;
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: 4px;
 }
 
 #lock {
-  color: #65d9ff;
+  color: #00e5ff;
 }
 
 #logout {
-  color: #f4f8ff;
+  color: #e6f0ff;
 }
 
 #suspend {
-  color: #9ab5d6;
+  color: #7aa0c8;
 }
 
 #reboot {
-  color: #b4e4ff;
+  color: #a48eff;
 }
 
 #shutdown {
-  color: #ff7777;
+  color: #ff6b60;
 }

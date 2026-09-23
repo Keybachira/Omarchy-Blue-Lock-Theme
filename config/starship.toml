@@ -1,42 +1,37 @@
-format = """
-[◉ ](bold #197DFF)$username
-[⚽ ](bold #65D9FF)$hostname
-[📁 ](bold #F4F8FF)$directory
-[🌿 ](bold #65D9FF)$git_branch$git_status
-[⚡ ](bold #9AB5D6)$cmd_duration
-$character"""
+format = """[⬢ ](bold #0066FF)[ $username](bold #E6F0FF)[ — ](bold #7AA0C8)[⚽ ](bold #00E5FF)$hostname[ ](bold #E6F0FF)$directory[ ](bold #00E5FF)$git_branch$git_status[ ](dimmed #7AA0C8)$cmd_duration
+[└─ EGO ](bold #00E5FF)$character"""
 
 add_newline = false
 
 [username]
 show_always = true
 format = "[$user]($style)"
-style = "bold #F4F8FF"
+style = "bold #E6F0FF"
 
 [hostname]
 ssh_only = false
 format = "[$hostname]($style)"
-style = "bold #65D9FF"
+style = "bold #00E5FF"
 
 [directory]
 format = "[$path]($style)"
-style = "bold #F4F8FF"
+style = "bold #E6F0FF"
 truncation_length = 3
 truncate_to_repo = false
 
 [git_branch]
 format = "[$branch]($style) "
-style = "bold #65D9FF"
+style = "bold #00E5FF"
 
 [git_status]
 format = "[$all_status$ahead_behind]($style)"
-style = "bold #B7ECFF"
+style = "bold #6BEEFF"
 
 [cmd_duration]
 min_time = 0
 format = "[$duration]($style)"
-style = "bold #9AB5D6"
+style = "bold #7AA0C8"
 
 [character]
-success_symbol = "[✔](bold #35D07F)"
-error_symbol = "[✖](bold #FF4D4D)"
+success_symbol = "[▶](bold #00E676)"
+error_symbol = "[✖](bold #FF3B30)"

@@ -1,37 +1,64 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2160" width="3840" height="2160">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#02040b"/>
-      <stop offset="0.52" stop-color="#050b18"/>
-      <stop offset="1" stop-color="#0b1630"/>
+      <stop offset="0" stop-color="#00030A"/>
+      <stop offset="0.5" stop-color="#010A1E"/>
+      <stop offset="1" stop-color="#0A1E3D"/>
     </linearGradient>
-    <radialGradient id="glow" cx="0.82" cy="0.48" r="0.5">
-      <stop offset="0" stop-color="#197dff" stop-opacity="0.22"/>
-      <stop offset="0.5" stop-color="#65d9ff" stop-opacity="0.08"/>
-      <stop offset="1" stop-color="#050b18" stop-opacity="0"/>
+    <radialGradient id="glow" cx="0.78" cy="0.52" r="0.58">
+      <stop offset="0" stop-color="#0066FF" stop-opacity="0.26"/>
+      <stop offset="0.4" stop-color="#00E5FF" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#010A1E" stop-opacity="0"/>
     </radialGradient>
+    <pattern id="hexGrid2" width="120" height="104" patternUnits="userSpaceOnUse">
+      <path d="M60 0 L116 32 L116 72 L60 104 L4 72 L4 32 Z" fill="none" stroke="#0066FF" stroke-opacity="0.06" stroke-width="1.1"/>
+    </pattern>
   </defs>
   <rect width="3840" height="2160" fill="url(#bg)"/>
+  <rect width="3840" height="2160" fill="url(#hexGrid2)"/>
   <rect width="3840" height="2160" fill="url(#glow)"/>
-  <g opacity="0.16">
-    <path d="M0 270 H3840 M0 540 H3840 M0 810 H3840 M0 1080 H3840 M0 1350 H3840 M0 1620 H3840 M0 1890 H3840" stroke="#197DFF" stroke-width="2"/>
-    <path d="M360 0 V2160 M720 0 V2160 M1080 0 V2160 M1440 0 V2160 M1800 0 V2160 M2160 0 V2160 M2520 0 V2160 M2880 0 V2160 M3240 0 V2160" stroke="#197DFF" stroke-width="1"/>
+
+  <!-- Grid sutil -->
+  <g opacity="0.06">
+    <path d="M0 270 H3840 M0 540 H3840 M0 810 H3840 M0 1080 H3840 M0 1350 H3840 M0 1620 H3840 M0 1890 H3840" stroke="#00E5FF" stroke-width="1"/>
+    <path d="M360 0 V2160 M720 0 V2160 M1080 0 V2160 M1440 0 V2160 M1800 0 V2160 M2160 0 V2160 M2520 0 V2160 M2880 0 V2160 M3240 0 V2160" stroke="#0066FF" stroke-width="0.6"/>
   </g>
 
-  <g transform="translate(2290 250)">
-    <polygon points="170,0 340,98 340,294 170,392 0,294 0,98" fill="#197DFF" fill-opacity="0.06" stroke="#197DFF" stroke-opacity="0.4" stroke-width="3"/>
-    <circle cx="170" cy="196" r="95" fill="none" stroke="#65D9FF" stroke-width="3" stroke-opacity="0.42"/>
-    <path d="M122 318 C140 264, 162 230, 170 230 C178 230, 200 264, 218 318" fill="none" stroke="#65D9FF" stroke-opacity="0.8" stroke-width="5" stroke-linecap="round"/>
-    <circle cx="170" cy="180" r="42" fill="#65D9FF" fill-opacity="0.12" stroke="#65D9FF" stroke-width="3"/>
+  <!-- Portal direita — mais sutil pro login -->
+  <g transform="translate(2320 260)" opacity="0.92">
+    <polygon points="170,0 340,98 340,294 170,392 0,294 0,98" fill="#0066FF" fill-opacity="0.05" stroke="#0066FF" stroke-opacity="0.32" stroke-width="2.5"/>
+    <circle cx="170" cy="196" r="96" fill="none" stroke="#00E5FF" stroke-width="2.2" stroke-opacity="0.32"/>
+    <circle cx="170" cy="196" r="132" fill="none" stroke="#0066FF" stroke-width="1" stroke-opacity="0.12"/>
+    <circle cx="170" cy="180" r="42" fill="#00E5FF" fill-opacity="0.09" stroke="#00E5FF" stroke-width="1.8" stroke-opacity="0.5"/>
+    <!-- olho pequeno -->
+    <ellipse cx="170" cy="182" rx="16" ry="24" fill="#00E5FF" fill-opacity="0.88"/>
+    <ellipse cx="170" cy="182" rx="7" ry="12" fill="#010A1E"/>
   </g>
 
-  <g transform="translate(220 205)" opacity="0.95">
-    <rect x="0" y="0" width="1140" height="24" rx="12" fill="#197DFF" fill-opacity="0.28"/>
-    <rect x="0" y="68" width="780" height="18" rx="9" fill="#65D9FF" fill-opacity="0.24"/>
-    <rect x="0" y="120" width="540" height="18" rx="9" fill="#197DFF" fill-opacity="0.22"/>
-    <rect x="0" y="172" width="410" height="18" rx="9" fill="#65D9FF" fill-opacity="0.2"/>
-    <rect x="0" y="224" width="240" height="18" rx="9" fill="#197DFF" fill-opacity="0.16"/>
-    <text x="0" y="332" fill="#F4F8FF" fill-opacity="0.92" font-family="Space Grotesk, sans-serif" font-size="54" letter-spacing="4">BLUE LOCK FACILITY</text>
-    <text x="0" y="398" fill="#9AB5D6" fill-opacity="0.88" font-family="Space Grotesk, sans-serif" font-size="28" letter-spacing="8">AUTHENTICATION NODE</text>
+  <!-- Texto esquerda — área do login -->
+  <g transform="translate(220 340)">
+    <text x="0" y="0" fill="none" stroke="#0066FF" stroke-width="2.2" stroke-opacity="0.38" font-family="Space Grotesk, sans-serif" font-size="96" font-weight="900" letter-spacing="14">BLUE LOCK</text>
+    <text x="0" y="0" fill="#E6F0FF" font-family="Space Grotesk, sans-serif" font-size="96" font-weight="900" letter-spacing="14">BLUE LOCK</text>
+    <rect x="0" y="28" width="520" height="3" rx="1.5" fill="#0066FF" fill-opacity="0.85"/>
+    <rect x="0" y="28" width="300" height="3" rx="1.5" fill="#00E5FF"/>
+    <text x="0" y="72" fill="#00E5FF" font-family="Space Grotesk, sans-serif" font-size="20" font-weight="700" letter-spacing="10">FACILITY FIVE</text>
+    <text x="0" y="104" fill="#7AA0C8" font-family="JetBrains Mono, monospace" font-size="13" letter-spacing="5">AUTHENTICATION  NODE  —  EGO  REQUIRED</text>
+    <!-- flor -->
+    <g transform="translate(260 168)">
+      <g fill="none" stroke="#00E5FF" stroke-width="1.6" stroke-opacity="0.85">
+        <ellipse cx="0" cy="-20" rx="10" ry="20"/>
+        <ellipse cx="19" cy="-6.2" rx="10" ry="20" transform="rotate(72 19 -6.2)"/>
+        <ellipse cx="11.8" cy="16.2" rx="10" ry="20" transform="rotate(144 11.8 16.2)"/>
+        <ellipse cx="-11.8" cy="16.2" rx="10" ry="20" transform="rotate(216 -11.8 16.2)"/>
+        <ellipse cx="-19" cy="-6.2" rx="10" ry="20" transform="rotate(288 -19 -6.2)"/>
+      </g>
+      <circle cx="0" cy="0" r="7" fill="#00E5FF"/>
+    </g>
+  </g>
+
+  <!-- bottom detail -->
+  <g transform="translate(220 1960)">
+    <rect x="0" y="0" width="560" height="1" fill="#0066FF" fill-opacity="0.22"/>
+    <text x="0" y="22" fill="#7AA0C8" font-family="JetBrains Mono, monospace" font-size="10" letter-spacing="4">300 CANDIDATES  —  1 SURVIVES  —  ARE YOU AN EGOIST?</text>
   </g>
 </svg>

@@ -5,15 +5,16 @@ configuration {
 }
 
 * {
-  bg0: rgba(5, 11, 24, 0.78);
-  bg1: rgba(11, 22, 48, 0.92);
-  bg2: rgba(25, 125, 255, 0.18);
-  bg3: rgba(25, 125, 255, 0.34);
-  fg0: #F4F8FF;
-  fg1: #9AB5D6;
-  accent: #197DFF;
-  accent2: #65D9FF;
-  urgent: #FF4D4D;
+  bg0: rgba(1, 10, 30, 0.78);
+  bg1: rgba(10, 30, 61, 0.92);
+  bg2: rgba(0, 102, 255, 0.20);
+  bg3: rgba(0, 102, 255, 0.38);
+  fg0: #E6F0FF;
+  fg1: #7AA0C8;
+  accent: #0066FF;
+  accent2: #00E5FF;
+  ego: #FFCC00;
+  urgent: #FF3B30;
   font: "Space Grotesk 12";
 }
 
@@ -25,7 +26,7 @@ window {
   background-color: @bg0;
   border: 2px;
   border-color: @accent;
-  border-radius: 24px;
+  border-radius: 22px;
   padding: 18px;
 }
 
@@ -37,7 +38,7 @@ mainbox {
 inputbar {
   background-color: @bg1;
   border: 1px solid @bg3;
-  border-radius: 18px;
+  border-radius: 16px;
   padding: 14px 16px;
   spacing: 12px;
 }
@@ -50,6 +51,7 @@ prompt {
 entry {
   text-color: @fg0;
   placeholder-color: @fg1;
+  placeholder: "ARE YOU AN EGOIST?";
   background-color: transparent;
   cursor-color: @accent2;
 }
@@ -63,7 +65,7 @@ listview {
 element {
   background-color: @bg1;
   border: 1px solid transparent;
-  border-radius: 16px;
+  border-radius: 14px;
   padding: 12px 14px;
   spacing: 12px;
 }
@@ -79,8 +81,8 @@ element selected {
 }
 
 element urgent {
-  background-color: alpha(@urgent, 0.14);
-  border: 1px solid @urgent;
+  background-color: alpha(@ego, 0.14);
+  border: 1px solid @ego;
 }
 
 element-icon {
@@ -93,6 +95,6 @@ element-text {
 
 message {
   background-color: @bg1;
-  border-radius: 16px;
+  border-radius: 14px;
   padding: 12px;
 }

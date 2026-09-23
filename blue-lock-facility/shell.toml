@@ -1,39 +1,39 @@
 [bar]
-background = "#050B18"
-background-alpha = 0.66
-text = "#F4F8FF"
-active = "#197DFF"
+background = "#010A1E"
+background-alpha = 0.62
+text = "#E6F0FF"
+active = "#0066FF"
 scale-with-font = true
 size-horizontal = 30
 size-vertical = 32
 
 [hyprland]
-active-border = "rgba(197DFFF2)"
-active-border-foreground = "rgba(F4F8FFF2)"
+active-border = "rgba(0066FFF2)"
+active-border-foreground = "rgba(00E5FFF2)"
 
 [controls]
-normal-color = "#F4F8FF"
+normal-color = "#E6F0FF"
 normal-fill-alpha = 0.04
-normal-border = "#197DFF"
+normal-border = "#0066FF"
 normal-border-width = 1
-normal-border-alpha = 0.28
-hover-cursor-color = "#F4F8FF"
+normal-border-alpha = 0.30
+hover-cursor-color = "#E6F0FF"
 hover-cursor-fill-alpha = 0.08
-hover-cursor-border = "#65D9FF"
+hover-cursor-border = "#00E5FF"
 hover-cursor-border-width = 1
-hover-cursor-border-alpha = 0.45
-focus-color = "#F4F8FF"
-focus-fill-alpha = 0.12
-focus-border = "#197DFF"
+hover-cursor-border-alpha = 0.50
+focus-color = "#E6F0FF"
+focus-fill-alpha = 0.14
+focus-border = "#0066FF"
 focus-border-width = 1
-focus-border-alpha = 0.45
-selected-color = "#F4F8FF"
-selected-fill-alpha = 0.18
-selected-border = "#197DFF"
+focus-border-alpha = 0.55
+selected-color = "#E6F0FF"
+selected-fill-alpha = 0.20
+selected-border = "#00E5FF"
 selected-border-width = 1
-selected-border-alpha = 0.8
-pressed-fill-alpha = 0.2
-selection-fill-alpha = 0.3
+selected-border-alpha = 0.9
+pressed-fill-alpha = 0.22
+selection-fill-alpha = 0.32
 
 [spacing]
 scale = 1.0
@@ -43,85 +43,85 @@ scale-with-font = true
 base-size = 12
 
 [popups]
-background = "#050B18"
-background-alpha = 0.88
-text = "#F4F8FF"
+background = "#010514"
+background-alpha = 0.92
+text = "#E6F0FF"
 border = "hyprland.active-border"
 border-alpha = 1.0
 
 [tooltip]
-background = "#0B1630"
+background = "#0A1E3D"
 background-alpha = 0.96
-text = "#F4F8FF"
+text = "#E6F0FF"
 border = "hyprland.active-border-foreground"
 border-alpha = 1.0
 
 [notifications]
-background = "#050B18"
+background = "#010514"
 background-alpha = 0.92
-text = "#F4F8FF"
+text = "#E6F0FF"
 border = "hyprland.active-border"
 border-alpha = 1.0
-countdown = "#65D9FF"
+countdown = "#00E5FF"
 
 [launcher]
-background = "#050B18"
+background = "#010514"
 background-alpha = 0.94
-text = "#F4F8FF"
+text = "#E6F0FF"
 border = "hyprland.active-border-foreground"
 border-alpha = 1.0
-scrim = "#050B18"
-scrim-alpha = 0.5
-selected-background = "#197DFF"
-selected-background-alpha = 0.14
-selected-text = "#F4F8FF"
+scrim = "#010A1E"
+scrim-alpha = 0.52
+selected-background = "#0066FF"
+selected-background-alpha = 0.18
+selected-text = "#E6F0FF"
 selected-border = "hyprland.active-border-foreground"
-selected-border-alpha = 0.35
+selected-border-alpha = 0.40
 
 [menu]
-background = "#050B18"
+background = "#010514"
 background-alpha = 0.94
-text = "#F4F8FF"
+text = "#E6F0FF"
 border = "hyprland.active-border-foreground"
 border-alpha = 1.0
-scrim = "#050B18"
-scrim-alpha = 0.5
-selected-background = "#197DFF"
-selected-background-alpha = 0.14
-selected-text = "#F4F8FF"
+scrim = "#010A1E"
+scrim-alpha = 0.52
+selected-background = "#0066FF"
+selected-background-alpha = 0.18
+selected-text = "#E6F0FF"
 selected-border = "hyprland.active-border-foreground"
-selected-border-alpha = 0.35
+selected-border-alpha = 0.40
 
 [polkit]
-background = "#050B18"
+background = "#010514"
 background-alpha = 0.94
-text = "#F4F8FF"
-text-error = "#FF4D4D"
+text = "#E6F0FF"
+text-error = "#FF3B30"
 border = "hyprland.active-border"
-border-error = "#FF4D4D"
+border-error = "#FF3B30"
 border-alpha = 1.0
-scrim = "#050B18"
-scrim-alpha = 0.58
-accent = "#197DFF"
+scrim = "#010A1E"
+scrim-alpha = 0.60
+accent = "#0066FF"
 
 [lock]
-background = "#050B18"
-background-alpha = 0.72
-text = "#F4F8FF"
-placeholder = "#9AB5D6"
-text-error = "#FF4D4D"
+background = "#010514"
+background-alpha = 0.68
+text = "#E6F0FF"
+placeholder = "#7AA0C8"
+text-error = "#FF3B30"
 border = "hyprland.active-border"
 border-active = "hyprland.active-border"
-border-error = "#FF4D4D"
+border-error = "#FF3B30"
 border-alpha = 1.0
-selection = "#197DFF"
+selection = "#0066FF"
 selection-alpha = 0.45
 
 [image-picker]
-scrim = "#050B18"
+scrim = "#010A1E"
 scrim-alpha = 0.48
-text = "#F4F8FF"
-selected-border = "#197DFF"
+text = "#E6F0FF"
+selected-border = "#00E5FF"
 selected-border-alpha = 1.0
-unselected-border = "#9AB5D6"
+unselected-border = "#7AA0C8"
 unselected-border-alpha = 0.28

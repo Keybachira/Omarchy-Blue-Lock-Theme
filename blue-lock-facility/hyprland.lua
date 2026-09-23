@@ -1,14 +1,16 @@
+-- BLUE LOCK FACILITY — Egoist Edition
+-- Facility brutalista + holograma hexagonal. Bordas = neon de estádio.
 local active_border_color = {
-  colors = { "rgba(197DFFF8)", "rgba(65D9FFF2)" },
-  angle = 45,
+  colors = { "rgba(0066FFF8)", "rgba(00E5FFF2)", "rgba(7B61FFEE)" },
+  angle = 35,
 }
 
-local inactive_border_color = "rgba(9AB5D63D)"
+local inactive_border_color = "rgba(7AA0C82E)"
 
 hl.config({
   general = {
-    gaps_in = 4,
-    gaps_out = 10,
+    gaps_in = 5,
+    gaps_out = 14,
     border_size = 2,
     col = {
       active_border = active_border_color,
@@ -20,20 +22,20 @@ hl.config({
   },
 
   decoration = {
-    rounding = 12,
+    rounding = 14,
     shadow = {
       enabled = true,
-      range = 24,
-      render_power = 3,
-      color = "rgba(02040B9E)",
-      color_inactive = "rgba(02040B5C)",
+      range = 32,
+      render_power = 4,
+      color = "rgba(00030AEE)",
+      color_inactive = "rgba(00030A66)",
     },
     blur = {
       enabled = true,
-      size = 6,
+      size = 7,
       passes = 2,
-      vibrancy = 0.18,
-      vibrancy_darkness = 0.9,
+      vibrancy = 0.22,
+      vibrancy_darkness = 0.88,
     },
   },
 
@@ -44,22 +46,22 @@ hl.config({
     },
     groupbar = {
       font_size = 12,
-      font_family = "JetBrains Mono Nerd Font",
-      font_weight_active = "ultraheavy",
+      font_family = "Space Grotesk",
+      font_weight_active = "bold",
       font_weight_inactive = "normal",
-      indicator_height = 2,
-      indicator_gap = 5,
-      height = 24,
-      gaps_in = 5,
+      indicator_height = 3,
+      indicator_gap = 6,
+      height = 26,
+      gaps_in = 6,
       gaps_out = 0,
-      text_color = "rgb(F4F8FF)",
-      text_color_inactive = "rgba(F4F8FFA3)",
+      text_color = "rgb(E6F0FF)",
+      text_color_inactive = "rgba(E6F0FF88)",
       col = {
-        active = "rgba(050B1870)",
-        inactive = "rgba(050B1838)",
+        active = "rgba(0066FF2E)",
+        inactive = "rgba(010A1E55)",
       },
       gradients = true,
-      gradient_rounding = 12,
+      gradient_rounding = 14,
       gradient_round_only_edges = false,
     },
   },
@@ -69,26 +71,27 @@ hl.config({
   },
 })
 
-hl.curve("blueLockEase", { type = "bezier", points = { { 0.18, 1 }, { 0.22, 1 } } })
-hl.curve("blueLockSnap", { type = "bezier", points = { { 0.16, 0 }, { 0.12, 1 } } })
-hl.curve("blueLockLinear", { type = "bezier", points = { { 0, 0 }, { 1, 1 } } })
+-- Curvas: facility doors = snap seco, ego aura = overshoot
+hl.curve("egoSnap", { type = "bezier", points = { { 0.22, 1 }, { 0.36, 1 } } })
+hl.curve("egoStrike", { type = "bezier", points = { { 0.08, 0.9 }, { 0.14, 1.1 } } })
+hl.curve("egoLinear", { type = "bezier", points = { { 0, 0 }, { 1, 1 } } })
 
-hl.animation({ leaf = "global", enabled = true, speed = 8, bezier = "blueLockEase" })
-hl.animation({ leaf = "border", enabled = true, speed = 4.6, bezier = "blueLockEase" })
-hl.animation({ leaf = "windows", enabled = true, speed = 3.4, bezier = "blueLockEase" })
-hl.animation({ leaf = "windowsIn", enabled = true, speed = 3.8, bezier = "blueLockEase", style = "popin 92%" })
-hl.animation({ leaf = "windowsOut", enabled = true, speed = 1.35, bezier = "blueLockLinear", style = "popin 92%" })
-hl.animation({ leaf = "fadeIn", enabled = true, speed = 1.5, bezier = "blueLockSnap" })
-hl.animation({ leaf = "fadeOut", enabled = true, speed = 1.28, bezier = "blueLockSnap" })
-hl.animation({ leaf = "fade", enabled = true, speed = 2.6, bezier = "blueLockSnap" })
+hl.animation({ leaf = "global", enabled = true, speed = 9, bezier = "egoSnap" })
+hl.animation({ leaf = "border", enabled = true, speed = 6, bezier = "egoSnap" })
+hl.animation({ leaf = "windows", enabled = true, speed = 3.6, bezier = "egoStrike" })
+hl.animation({ leaf = "windowsIn", enabled = true, speed = 4.0, bezier = "egoStrike", style = "popin 94%" })
+hl.animation({ leaf = "windowsOut", enabled = true, speed = 1.5, bezier = "egoLinear", style = "popin 90%" })
+hl.animation({ leaf = "fadeIn", enabled = true, speed = 1.6, bezier = "egoSnap" })
+hl.animation({ leaf = "fadeOut", enabled = true, speed = 1.35, bezier = "egoSnap" })
+hl.animation({ leaf = "fade", enabled = true, speed = 2.8, bezier = "egoSnap" })
 hl.animation({ leaf = "fadeSwitch", enabled = false })
-hl.animation({ leaf = "layers", enabled = true, speed = 3.4, bezier = "blueLockEase" })
-hl.animation({ leaf = "layersIn", enabled = true, speed = 3.6, bezier = "blueLockEase", style = "fade" })
-hl.animation({ leaf = "layersOut", enabled = true, speed = 1.35, bezier = "blueLockLinear", style = "fade" })
-hl.animation({ leaf = "fadeLayersIn", enabled = true, speed = 1.6, bezier = "blueLockSnap" })
-hl.animation({ leaf = "fadeLayersOut", enabled = true, speed = 1.24, bezier = "blueLockSnap" })
-hl.animation({ leaf = "workspaces", enabled = true, speed = 3.0, bezier = "blueLockEase" })
-hl.animation({ leaf = "specialWorkspace", enabled = true, speed = 2.8, bezier = "blueLockEase", style = "slidevert" })
+hl.animation({ leaf = "layers", enabled = true, speed = 3.6, bezier = "egoSnap" })
+hl.animation({ leaf = "layersIn", enabled = true, speed = 3.8, bezier = "egoSnap", style = "slide top" })
+hl.animation({ leaf = "layersOut", enabled = true, speed = 1.5, bezier = "egoLinear", style = "slide top" })
+hl.animation({ leaf = "fadeLayersIn", enabled = true, speed = 1.8, bezier = "egoSnap" })
+hl.animation({ leaf = "fadeLayersOut", enabled = true, speed = 1.3, bezier = "egoSnap" })
+hl.animation({ leaf = "workspaces", enabled = true, speed = 4.2, bezier = "egoStrike", style = "slide" })
+hl.animation({ leaf = "specialWorkspace", enabled = true, speed = 3.2, bezier = "egoStrike", style = "slidevert" })
 
 hl.config({
   dwindle = {
@@ -126,19 +129,19 @@ hl.config({
 })
 
 o.window({ tag = "floating-window" }, {
-  rounding = 16,
-  opacity = "0.98 0.93",
+  rounding = 18,
+  opacity = "0.98 0.92",
 })
 
 o.window({ tag = "pop" }, {
-  rounding = 12,
+  rounding = 14,
   opacity = "0.98 0.94",
 })
 
 o.window(
   "^(org\\.omarchy\\.terminal|org\\.codeberg\\.dnkl\\.foot|com\\.mitchellh\\.ghostty|kitty|alacritty|foot)$",
   {
-    opacity = "0.99 0.96",
+    opacity = "0.98 0.95",
   }
 )
 

@@ -1,66 +1,180 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2160" width="3840" height="2160">
   <defs>
+    <!-- Fundo facility — concreto + noite -->
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#02040b"/>
-      <stop offset="0.46" stop-color="#050b18"/>
-      <stop offset="1" stop-color="#0b1630"/>
+      <stop offset="0" stop-color="#00030A"/>
+      <stop offset="0.42" stop-color="#010A1E"/>
+      <stop offset="0.78" stop-color="#04102E"/>
+      <stop offset="1" stop-color="#0A1E3D"/>
     </linearGradient>
-    <radialGradient id="glow" cx="0.78" cy="0.5" r="0.54">
-      <stop offset="0" stop-color="#197dff" stop-opacity="0.24"/>
-      <stop offset="0.44" stop-color="#65d9ff" stop-opacity="0.09"/>
-      <stop offset="1" stop-color="#050b18" stop-opacity="0"/>
+    <!-- Glow ego — aura atrás do campo -->
+    <radialGradient id="egoGlow" cx="0.72" cy="0.55" r="0.62">
+      <stop offset="0" stop-color="#0066FF" stop-opacity="0.32"/>
+      <stop offset="0.35" stop-color="#00E5FF" stop-opacity="0.14"/>
+      <stop offset="0.65" stop-color="#7B61FF" stop-opacity="0.06"/>
+      <stop offset="1" stop-color="#010A1E" stop-opacity="0"/>
     </radialGradient>
-    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#197dff" stop-opacity="0"/>
-      <stop offset="0.5" stop-color="#197dff" stop-opacity="0.4"/>
-      <stop offset="1" stop-color="#65d9ff" stop-opacity="0"/>
+    <!-- Hex grid pattern -->
+    <pattern id="hexGrid" width="120" height="104" patternUnits="userSpaceOnUse" patternTransform="translate(0 0)">
+      <path d="M60 0 L116 32 L116 72 L60 104 L4 72 L4 32 Z" fill="none" stroke="#0066FF" stroke-opacity="0.07" stroke-width="1.2"/>
+    </pattern>
+    <!-- Scanline facility -->
+    <linearGradient id="scan" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#00E5FF" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#00E5FF" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#00E5FF" stop-opacity="0"/>
     </linearGradient>
-    <filter id="blur" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="22"/>
-    </filter>
   </defs>
 
   <rect width="3840" height="2160" fill="url(#bg)"/>
-  <rect width="3840" height="2160" fill="url(#glow)"/>
+  <rect width="3840" height="2160" fill="url(#hexGrid)"/>
+  <rect width="3840" height="2160" fill="url(#egoGlow)"/>
 
-  <g opacity="0.18">
-    <path d="M0 180 H3840 M0 360 H3840 M0 540 H3840 M0 720 H3840 M0 900 H3840 M0 1080 H3840 M0 1260 H3840 M0 1440 H3840 M0 1620 H3840 M0 1800 H3840" stroke="#197DFF" stroke-width="2"/>
-    <path d="M320 0 V2160 M640 0 V2160 M960 0 V2160 M1280 0 V2160 M1600 0 V2160 M1920 0 V2160 M2240 0 V2160 M2560 0 V2160 M2880 0 V2160 M3200 0 V2160 M3520 0 V2160" stroke="#197DFF" stroke-width="1"/>
+  <!-- Top field lines — perspectiva estádio -->
+  <g opacity="0.09">
+    <path d="M0 168 H3840 M0 336 H3840 M0 504 H3840 M0 672 H3840 M0 840 H3840 M0 1008 H3840 M0 1176 H3840 M0 1344 H3840 M0 1512 H3840 M0 1680 H3840 M0 1848 H3840 M0 2016 H3840" stroke="#00E5FF" stroke-width="1"/>
+    <path d="M280 0 V2160 M560 0 V2160 M840 0 V2160 M1120 0 V2160 M1400 0 V2160 M1680 0 V2160 M1960 0 V2160 M2240 0 V2160 M2520 0 V2160 M2800 0 V2160 M3080 0 V2160 M3360 0 V2160 M3640 0 V2160" stroke="#0066FF" stroke-width="0.7"/>
   </g>
 
-  <g transform="translate(2250 180)" opacity="0.9">
-    <polygon points="240,0 480,140 480,420 240,560 0,420 0,140" fill="#197DFF" fill-opacity="0.05" stroke="#197DFF" stroke-opacity="0.4" stroke-width="3"/>
-    <polygon points="240,70 420,175 420,385 240,490 60,385 60,175" fill="#65D9FF" fill-opacity="0.04" stroke="#65D9FF" stroke-opacity="0.3" stroke-width="2"/>
-    <circle cx="240" cy="280" r="122" fill="none" stroke="#65D9FF" stroke-opacity="0.42" stroke-width="3"/>
-    <circle cx="240" cy="280" r="172" fill="none" stroke="#197DFF" stroke-opacity="0.18" stroke-width="2"/>
-    <circle cx="240" cy="280" r="210" fill="none" stroke="#197DFF" stroke-opacity="0.08" stroke-width="2"/>
-    <path d="M180 468 C210 416, 270 416, 300 468 C295 520, 287 590, 280 650 L200 650 C193 590, 185 520, 180 468 Z" fill="#197DFF" fill-opacity="0.18" stroke="#65D9FF" stroke-opacity="0.55" stroke-width="3"/>
-    <circle cx="240" cy="245" r="48" fill="#65D9FF" fill-opacity="0.12" stroke="#65D9FF" stroke-opacity="0.8" stroke-width="3"/>
-    <path d="M135 470 L184 525 L240 495 L296 525 L345 470" fill="none" stroke="#65D9FF" stroke-opacity="0.85" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M155 700 L325 700" stroke="#197DFF" stroke-opacity="0.8" stroke-width="10" stroke-linecap="round"/>
-    <path d="M210 720 L270 720" stroke="#65D9FF" stroke-opacity="0.5" stroke-width="6" stroke-linecap="round"/>
+  <!-- FACILITY SIDEBAR — esquerda escura pra terminal (legibilidade) -->
+  <rect x="0" y="0" width="1480" height="2160" fill="#00030A" fill-opacity="0.72"/>
+
+  <!-- BLUE LOCK LOGO — gigante, outline manga -->
+  <g transform="translate(120 168)">
+    <!-- Texto outline atrás -->
+    <text x="0" y="148" fill="none" stroke="#0066FF" stroke-width="3.5" stroke-opacity="0.55" font-family="Space Grotesk, sans-serif" font-size="168" font-weight="900" letter-spacing="18">BLUE LOCK</text>
+    <text x="0" y="148" fill="#E6F0FF" font-family="Space Grotesk, sans-serif" font-size="168" font-weight="900" letter-spacing="18">BLUE LOCK</text>
+    <!-- sub -->
+    <text x="4" y="196" fill="#00E5FF" font-family="Space Grotesk, sans-serif" font-size="22" font-weight="700" letter-spacing="18">PROJECT : FACILITY FIVE</text>
+    <text x="4" y="226" fill="#7AA0C8" font-family="JetBrains Mono Nerd Font, monospace" font-size="13" font-weight="400" letter-spacing="6">300 CANDIDATES — 1 EGOIST — CHEMICAL REACTION</text>
+    <!-- barra ego -->
+    <rect x="0" y="252" width="720" height="3" rx="1.5" fill="#0066FF" fill-opacity="0.9"/>
+    <rect x="0" y="252" width="420" height="3" rx="1.5" fill="#00E5FF"/>
   </g>
 
-  <g transform="translate(200 220)" opacity="0.95">
-    <rect x="0" y="0" width="1200" height="22" rx="11" fill="url(#glass)" filter="url(#blur)"/>
-    <rect x="0" y="0" width="920" height="22" rx="11" fill="url(#glass)"/>
-    <rect x="0" y="72" width="840" height="18" rx="9" fill="#197DFF" fill-opacity="0.35"/>
-    <rect x="0" y="120" width="680" height="18" rx="9" fill="#65D9FF" fill-opacity="0.22"/>
-    <rect x="0" y="168" width="520" height="18" rx="9" fill="#197DFF" fill-opacity="0.18"/>
-    <rect x="0" y="216" width="320" height="18" rx="9" fill="#65D9FF" fill-opacity="0.18"/>
-    <rect x="0" y="264" width="940" height="2" fill="#197DFF" fill-opacity="0.45"/>
-    <g transform="translate(0 340)" opacity="0.9">
-      <rect x="0" y="0" width="220" height="220" rx="28" fill="#0b1630" fill-opacity="0.72" stroke="#197DFF" stroke-opacity="0.5" stroke-width="2"/>
-      <path d="M48 148 C84 72, 136 72, 172 148" fill="none" stroke="#65D9FF" stroke-width="6" stroke-linecap="round"/>
-      <circle cx="110" cy="80" r="28" fill="none" stroke="#197DFF" stroke-opacity="0.7" stroke-width="5"/>
-      <path d="M58 178 L162 178" stroke="#197DFF" stroke-width="6" stroke-linecap="round"/>
+  <!-- Monitor cards — facility UI -->
+  <g transform="translate(120 380)">
+    <!-- Card 1 — RANK -->
+    <g>
+      <rect x="0" y="0" width="340" height="210" rx="20" fill="#0A1E3D" fill-opacity="0.55" stroke="#0066FF" stroke-opacity="0.38" stroke-width="1.6"/>
+      <rect x="0" y="0" width="340" height="38" rx="20" fill="#0066FF" fill-opacity="0.14"/>
+      <rect x="0" y="18" width="340" height="20" fill="#0A1E3D" fill-opacity="0.55"/>
+      <text x="20" y="26" fill="#00E5FF" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="800" letter-spacing="4">RANKING — TOP 300</text>
+      <text x="20" y="88" fill="#E6F0FF" font-family="Space Grotesk, sans-serif" font-size="64" font-weight="900" letter-spacing="2">001</text>
+      <text x="20" y="118" fill="#7AA0C8" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="3">EGOIST CANDIDATE</text>
+      <rect x="20" y="138" width="300" height="6" rx="3" fill="#010A1E"/>
+      <rect x="20" y="138" width="218" height="6" rx="3" fill="#00E5FF"/>
+      <text x="20" y="168" fill="#7AA0C8" font-family="JetBrains Mono, monospace" font-size="10" letter-spacing="2">CHEMICAL REACTION 72%</text>
+    </g>
+    <!-- Card 2 — FIELD -->
+    <g transform="translate(368 0)">
+      <rect x="0" y="0" width="340" height="210" rx="20" fill="#0A1E3D" fill-opacity="0.55" stroke="#0066FF" stroke-opacity="0.38" stroke-width="1.6"/>
+      <rect x="0" y="0" width="340" height="38" rx="20" fill="#0066FF" fill-opacity="0.14"/>
+      <rect x="0" y="18" width="340" height="20" fill="#0A1E3D" fill-opacity="0.55"/>
+      <text x="20" y="26" fill="#00E5FF" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="800" letter-spacing="4">FIELD — STRATUM 05</text>
+      <!-- mini campo -->
+      <g transform="translate(20 58)">
+        <rect x="0" y="0" width="300" height="120" rx="10" fill="none" stroke="#0066FF" stroke-opacity="0.35" stroke-width="1.4"/>
+        <line x1="150" y1="0" x2="150" y2="120" stroke="#00E5FF" stroke-opacity="0.22" stroke-width="1"/>
+        <circle cx="150" cy="60" r="28" fill="none" stroke="#00E5FF" stroke-opacity="0.28" stroke-width="1.2"/>
+        <circle cx="150" cy="60" r="2.5" fill="#00E5FF"/>
+        <rect x="0" y="30" width="42" height="60" fill="none" stroke="#0066FF" stroke-opacity="0.28" stroke-width="1"/>
+        <rect x="258" y="30" width="42" height="60" fill="none" stroke="#0066FF" stroke-opacity="0.28" stroke-width="1"/>
+        <!-- bola -->
+        <circle cx="186" cy="60" r="7" fill="#E6F0FF" stroke="#00E5FF" stroke-width="1.2"/>
+        <circle cx="186" cy="60" r="10" fill="none" stroke="#00E5FF" stroke-opacity="0.42" stroke-width="1"/>
+      </g>
+      <text x="20" y="200" fill="#7AA0C8" font-family="JetBrains Mono, monospace" font-size="10" letter-spacing="2">POSSESSION 64% — EGO ZONE</text>
+    </g>
+    <!-- Card 3 — EGO -->
+    <g transform="translate(736 0)">
+      <rect x="0" y="0" width="340" height="210" rx="20" fill="#0A1E3D" fill-opacity="0.55" stroke="#00E5FF" stroke-opacity="0.32" stroke-width="1.6"/>
+      <rect x="0" y="0" width="340" height="38" rx="20" fill="#00E5FF" fill-opacity="0.10"/>
+      <rect x="0" y="18" width="340" height="20" fill="#0A1E3D" fill-opacity="0.55"/>
+      <text x="20" y="26" fill="#00E5FF" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="800" letter-spacing="4">EGO — DEVOUR</text>
+      <text x="20" y="88" fill="#E6F0FF" font-family="Space Grotesk, sans-serif" font-size="42" font-weight="900" letter-spacing="6">EGOIST</text>
+      <text x="20" y="116" fill="#7AA0C8" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="3">DESTROY TO CREATE</text>
+      <g transform="translate(20 138)">
+        <rect x="0" y="0" width="300" height="22" rx="11" fill="#010A1E" stroke="#0066FF" stroke-opacity="0.3" stroke-width="1"/>
+        <rect x="2" y="2" width="228" height="18" rx="9" fill="url(#scan)"/>
+        <rect x="2" y="2" width="228" height="18" rx="9" fill="#0066FF" fill-opacity="0.85"/>
+        <text x="150" y="15" fill="#E6F0FF" font-family="Space Grotesk, sans-serif" font-size="10" font-weight="800" letter-spacing="2" text-anchor="middle">EGO 76%</text>
+      </g>
     </g>
   </g>
 
-  <g opacity="0.48">
-    <path d="M2470 1450 L3000 1450" stroke="#197DFF" stroke-width="4" stroke-linecap="round"/>
-    <path d="M2570 1498 L3060 1498" stroke="#65D9FF" stroke-width="4" stroke-linecap="round"/>
-    <path d="M2720 1548 L3180 1548" stroke="#197DFF" stroke-width="4" stroke-linecap="round"/>
-    <path d="M2860 1598 L3230 1598" stroke="#65D9FF" stroke-width="4" stroke-linecap="round"/>
+  <!-- FLOR AZUL — símbolo Blue Lock (Isagi) -->
+  <g transform="translate(120 660)" opacity="0.95">
+    <rect x="0" y="0" width="1084" height="3" rx="1.5" fill="#0066FF" fill-opacity="0.5"/>
+    <g transform="translate(540 18)">
+      <!-- flor 5 pétalas geométrica -->
+      <g fill="none" stroke="#00E5FF" stroke-width="1.8" stroke-opacity="0.9">
+        <ellipse cx="0" cy="-28" rx="14" ry="28"/>
+        <ellipse cx="26.6" cy="-8.6" rx="14" ry="28" transform="rotate(72 26.6 -8.6)"/>
+        <ellipse cx="16.5" cy="22.6" rx="14" ry="28" transform="rotate(144 16.5 22.6)"/>
+        <ellipse cx="-16.5" cy="22.6" rx="14" ry="28" transform="rotate(216 -16.5 22.6)"/>
+        <ellipse cx="-26.6" cy="-8.6" rx="14" ry="28" transform="rotate(288 -26.6 -8.6)"/>
+      </g>
+      <circle cx="0" cy="0" r="10" fill="#00E5FF" fill-opacity="0.95" stroke="#E6F0FF" stroke-opacity="0.9" stroke-width="1.2"/>
+      <circle cx="0" cy="0" r="18" fill="none" stroke="#0066FF" stroke-opacity="0.35" stroke-width="1"/>
+      <circle cx="0" cy="0" r="32" fill="none" stroke="#0066FF" stroke-opacity="0.14" stroke-width="1"/>
+    </g>
+    <!-- cadeias sutis — Ego -->
+    <g opacity="0.22" stroke="#7AA0C8" stroke-width="1.4" fill="none" stroke-linecap="round">
+      <path d="M 220 18 C 260 6, 300 30, 340 18 S 420 6, 460 18"/>
+      <path d="M 620 18 C 660 30, 700 6, 740 18 S 820 30, 860 18"/>
+    </g>
+    <g opacity="0.42">
+      <circle cx="240" cy="18" r="4" fill="none" stroke="#7AA0C8" stroke-width="1.2"/>
+      <circle cx="844" cy="18" r="4" fill="none" stroke="#7AA0C8" stroke-width="1.2"/>
+    </g>
+  </g>
+
+  <!-- Quote Ego Jinpachi -->
+  <g transform="translate(120 760)" opacity="0.88">
+    <text x="0" y="0" fill="#E6F0FF" fill-opacity="0.92" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="700" letter-spacing="5" font-style="italic">“ARE YOU AN EGOIST?”</text>
+    <text x="0" y="20" fill="#7AA0C8" font-family="JetBrains Mono, monospace" font-size="10" letter-spacing="4">— EGO JINPACHI — BLUE LOCK FACILITY 05</text>
+  </g>
+
+  <!-- DIREITA — PORTAL HEXAGONAL + AURA -->
+  <g transform="translate(2180 120)">
+    <!-- aura atrás -->
+    <ellipse cx="420" cy="520" rx="380" ry="520" fill="none" stroke="#0066FF" stroke-opacity="0.06" stroke-width="1"/>
+    <ellipse cx="420" cy="520" rx="300" ry="420" fill="none" stroke="#00E5FF" stroke-opacity="0.05" stroke-width="1"/>
+    <!-- hex grande -->
+    <polygon points="420,40 760,236 760,628 420,824 80,628 80,236" fill="#0066FF" fill-opacity="0.04" stroke="#0066FF" stroke-opacity="0.28" stroke-width="2.5"/>
+    <polygon points="420,110 690,266 690,578 420,734 150,578 150,266" fill="none" stroke="#00E5FF" stroke-opacity="0.18" stroke-width="1.4"/>
+    <polygon points="420,180 620,296 620,528 420,644 220,528 220,296" fill="#00E5FF" fill-opacity="0.03" stroke="#00E5FF" stroke-opacity="0.22" stroke-width="1.6"/>
+    <!-- círculo central — campo -->
+    <circle cx="420" cy="432" r="148" fill="none" stroke="#00E5FF" stroke-opacity="0.38" stroke-width="2.2"/>
+    <circle cx="420" cy="432" r="196" fill="none" stroke="#0066FF" stroke-opacity="0.14" stroke-width="1.2"/>
+    <circle cx="420" cy="432" r="232" fill="none" stroke="#7B61FF" stroke-opacity="0.08" stroke-width="1"/>
+    <!-- olho ego — pupila -->
+    <circle cx="420" cy="412" r="52" fill="#010A1E" stroke="#00E5FF" stroke-opacity="0.7" stroke-width="2.2"/>
+    <ellipse cx="420" cy="412" rx="22" ry="34" fill="#00E5FF" fill-opacity="0.92"/>
+    <ellipse cx="420" cy="412" rx="9" ry="16" fill="#010A1E"/>
+    <circle cx="426" cy="400" r="4" fill="#E6F0FF" fill-opacity="0.95"/>
+    <!-- aura picos -->
+    <g stroke="#00E5FF" stroke-opacity="0.22" stroke-width="1.2" fill="none" stroke-linecap="round">
+      <path d="M420 240 L420 200 M520 272 L548 238 M602 342 L636 322 M628 442 L668 442 M602 522 L636 542 M520 592 L548 626 M420 624 L420 664 M320 592 L292 626 M238 522 L204 542 M212 442 L172 442 M238 342 L204 322 M320 272 L292 238"/>
+    </g>
+    <!-- base -->
+    <path d="M360 660 C390 620, 450 620, 480 660 C475 700, 468 750, 462 790 L378 790 C372 750, 365 700, 360 660 Z" fill="#0066FF" fill-opacity="0.10" stroke="#00E5FF" stroke-opacity="0.42" stroke-width="1.8"/>
+    <path d="M312 792 L528 792" stroke="#0066FF" stroke-opacity="0.55" stroke-width="10" stroke-linecap="round"/>
+    <path d="M358 810 L482 810" stroke="#00E5FF" stroke-opacity="0.32" stroke-width="5" stroke-linecap="round"/>
+    <!-- labels facility -->
+    <g font-family="JetBrains Mono, monospace" font-size="10" letter-spacing="3">
+      <text x="80" y="880" fill="#7AA0C8">STRATUM-05</text>
+      <text x="80" y="898" fill="#00E5FF" font-weight="700">EGO ZONE — ACTIVE</text>
+      <text x="680" y="880" fill="#7AA0C8" text-anchor="end">BL-300</text>
+      <text x="680" y="898" fill="#7AA0C8" text-anchor="end">SURVIVAL</text>
+    </g>
+  </g>
+
+  <!-- Rodapé facility — status bar -->
+  <g transform="translate(0 2060)">
+    <rect x="0" y="0" width="3840" height="1" fill="#0066FF" fill-opacity="0.22"/>
+    <text x="120" y="28" fill="#7AA0C8" font-family="JetBrains Mono, monospace" font-size="10" letter-spacing="4">FACILITY_STATUS: OPERATIONAL — EGO_THRESHOLD: 76% — CHEMICAL_REACTION: STABLE</text>
+    <text x="3720" y="28" fill="#7AA0C8" font-family="JetBrains Mono, monospace" font-size="10" letter-spacing="3" text-anchor="end">BLUE LOCK © EGO JINPACHI</text>
   </g>
 </svg>
